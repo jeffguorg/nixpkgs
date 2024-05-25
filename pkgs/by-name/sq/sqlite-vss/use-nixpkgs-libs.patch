@@ -2,7 +2,7 @@ diff --git a/CMakeLists.txt b/CMakeLists.txt
 index c59d993..5606b46 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -18,15 +18,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
+@@ -18,15 +18,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
  option(FAISS_ENABLE_GPU "" OFF)
  option(FAISS_ENABLE_PYTHON "" OFF)
  option(BUILD_TESTING "" OFF)
@@ -11,6 +11,7 @@ index c59d993..5606b46 100644
 -# vendor in SQLite amalgammation
 -include_directories(vendor/sqlite)
 -link_directories(BEFORE vendor/sqlite)
++find_package(CUDAToolkit)
 +find_package(OpenMP REQUIRED)
 +find_package(faiss REQUIRED)
  
